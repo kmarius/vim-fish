@@ -13,7 +13,7 @@ syntax match fishComment /#.*/
 syntax match fishSpecial /\\$/
 syntax match fishSubscriptRange /\.\./ contained
 syntax match fishIdentifierSubscript /\[\zs[^]]\+\ze\]/ contained contains=fishSubscriptRange
-syntax match fishIdentifier /\$[[:alnum:]_]\+\%(\[[^]]\+\]\)\?/ contains=fishIdentifierSubscript
+syntax match fishIdentifier /\$\+[[:alnum:]_]\+\%(\[[^]]\+\]\)*/ contains=fishIdentifierSubscript
 syntax match fishEscapeQuote /\\['\\]/ contained
 syntax match fishEscapeDQuote /\\["$\\]/ contained
 syntax region fishString start=/'/ skip=/\\\\\|\\'/ end=/'/ contains=fishEscapeQuote
