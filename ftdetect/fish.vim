@@ -12,10 +12,10 @@ autocmd BufRead *
 autocmd BufRead fish_funced_*_*.fish call search('^$')
 
 " Fish histories are YAML documents.
-autocmd BufRead,BufNewFile ~/.config/fish/fish_{read_,}history setfiletype yaml
+autocmd BufRead,BufNewFile ~/.local/share/fish/fish_{read_,}history setfiletype yaml
 
 " Universal variable storages should not be hand edited.
-autocmd BufRead,BufNewFile ~/.config/fish/fishd.* setlocal readonly
+autocmd BufRead,BufNewFile ~/.config/fish/fish_variables setlocal readonly
 
 " Mimic `funced` when manually creating functions.
 autocmd BufNewFile ~/.config/fish/functions/*.fish
