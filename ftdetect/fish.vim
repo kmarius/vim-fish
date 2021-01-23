@@ -1,4 +1,4 @@
-autocmd!
+" autocmd!
 
 autocmd BufRead,BufNewFile *.fish setfiletype fish
 
